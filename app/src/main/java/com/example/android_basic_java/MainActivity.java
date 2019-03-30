@@ -25,13 +25,9 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                try{
-                    a = e1.getText().toString();
-                    b = e2.getText().toString();
-                }catch (Exception e){
-                    Toast.makeText(MainActivity.this, "Sorry no text taken", Toast.LENGTH_SHORT).show();
-                }
+                
+                a = e1.getText().toString();
+                b = e2.getText().toString();
                 Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
                 intent.putExtra("NAME",a);
                 intent.putExtra("DETAILS",b);
